@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="main.css">
+    <title>Educating Students About Marijuana</title>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+
+
+<header>
+    <div id="align-horizontal">
+        <img src="images/weed.png" alt="" class="align">
+        <h1 class="align"><u>Marijuana and Car Accidents</u></h1>
+        <img src="images/weed.png" alt="" class="align">
+    </div>
+</header>
+    
+<main>
+    <div class="quote">
+        <blockquote>"Approximately 1 in 10 people who use marijuana will become addicted. When they start before age 18, the rate of addiction rises to 1 in 6."</blockquote>
+        <p cite="https://www.samhsa.gov/marijuana">- SAMHSA.gov</p>
+    </div>
+
+    <div class="center">
+        <img src="images/pointing_finger.png" alt="">
+        <p id="fearmonger">DON'T DRIVE WHILE HIGH!</p>
+    </div>
+
+    <div id="facts-content">
+        <h2>Learn The Facts</h2>
+        <div class="facts">
+            <div class="f-content">
+                <a href="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/" target="_blank"><img src="images/marijuana_thc_graph.png" alt="" width="700" height="500" cite="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/"></a>
+                <p  class="source" cite="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/"><cite>Source: sas.com</cite></p>
+                <p>Tetrahydrocannabinol (THC)  contributes to most of marijuana's psychological effects, affecting the memory, movement, coordination, and time perception.</p>
+                <ul>
+                    <li>THC levels in the 1990s: 3-4%</li>
+                    <li>THC levels today: 15-20%</li>
+                </ul>
+            </div>
+
+            <div class="f-content">
+                <a href="https://www.samhsa.gov/data/sites/default/files/reports/rpt29393/2019NSDUHFFRPDFWHTML/2019NSDUHFFR1PDFW090120.pdf" target="_blank"><img src="images/graph2.png" alt="" width="950" height="500"></a>
+                <p class="source" cite="https://www.samhsa.gov/data/sites/default/files/reports/rpt29393/2019NSDUHFFRPDFWHTML/2019NSDUHFFR1PDFW090120.pdf"><cite>Source: SAMHSA.gov, pg. 15</cite></p>
+                
+                <ul>
+                    <li>Ages 12-17: 3.3 million</li>
+                    <li>Ages 18-25: 12.0 million</li>
+                    <li>Ages 26+:   33.0 million</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="chartContainer" style="height: 300px; width: 100%;"></div> -->
+
+</main>
+
+<script>
+window.onload = function () {
+
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        exportEnabled: true,
+        theme: "light1", // "light1", "light2", "dark1", "dark2"
+        title:{
+            text: "Trends in Prevalence of Marijuana, 2018"
+        },
+        axisY: {
+        includeZero: true
+        },
+        data: [{
+            type: "column", //change type to bar, line, area, pie, etc
+            //indexLabel: "{y}", //Shows y value on all Data Points
+            indexLabelFontColor: "#5A5757",
+            indexLabelFontSize: 16,
+            indexLabelPlacement: "outside",
+            dataPoints: [
+                { y: 15.4, label: "Ages 12-17" },
+                { y: 51.5, label: "Ages 18-25"},
+                { y: 47.8, label: "Ages 26+"}
+            ]
+        }]
+    });
+    chart.render();
+
+}
+</script>
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
+
+<!-- weed.png https://assets.stickpng.com/images/58499e38b89d73775876620e.png -->

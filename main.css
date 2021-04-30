@@ -1,0 +1,91 @@
+
+html {
+    /*background-color: chartreuse;*/
+    /* color gradient: https://cssgradient.io/ */
+    background: rgb(81,181,104);
+    background: linear-gradient(90deg, rgba(81,181,104,1) 0%, rgba(3,255,0,1) 100%);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header img {
+    width: 50px;
+    height: 50px
+}
+
+header #align-horizontal {
+    width: 100%;
+    margin: 0 auto;
+}
+
+header #align-horizontal .align {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+main {
+    /*text-align: center; */
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: wheat;
+    padding: 25px;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.quote {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.quote blockquote {
+    margin-bottom: 0px;
+}
+
+.quote p {
+    margin: 0;
+    margin-left: 50px;
+}
+
+.source {
+    margin-top: 3px;
+}
+
+.center {
+    text-align: center;
+}
+
+#fearmonger {
+    font-size: 32px;
+}
+
+#facts-content {
+    margin-left: 20px;
+}
+
+.f-content {
+    background-color: rgb(200, 200, 200);
+    border: 3px solid black;
+    padding: 10px;
+}
+
+.facts {
+    margin-left: 20px;
+}
+
+ul {
+    counter-reset: item;
+}
+ul li {
+    display: block;
+}
+ul li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    width: 2em;
+    display: inline-block;
+}
