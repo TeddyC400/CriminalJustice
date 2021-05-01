@@ -46,7 +46,7 @@ main {
     margin-bottom: 0px;
 }
 
-.quote p {
+.quote a {
     margin: 0;
     margin-left: 50px;
 }
@@ -59,7 +59,7 @@ main {
     text-align: center;
 }
 
-#fearmonger {
+.fearmonger {
     font-size: 32px;
 }
 
@@ -88,4 +88,16 @@ ul li:before {
     counter-increment: item;
     width: 2em;
     display: inline-block;
+}
+
+.joints {
+    display: flex;
+    justify-content: space-between;
+}
+
+.joint {
+    width: 100px;
+    height: 25px;
+    padding: 35px;
+    margin-top: 35px;
 }

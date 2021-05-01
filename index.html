@@ -23,22 +23,44 @@
 <main>
     <div class="quote">
         <blockquote>"Approximately 1 in 10 people who use marijuana will become addicted. When they start before age 18, the rate of addiction rises to 1 in 6."</blockquote>
-        <p cite="https://www.samhsa.gov/marijuana">- SAMHSA.gov</p>
+        <a href="https://www.samhsa.gov/marijuana" target="_blank">- SAMHSA.gov</a>
     </div>
 
-    <div class="center">
-        <img src="images/pointing_finger.png" alt="">
-        <p id="fearmonger">DON'T DRIVE WHILE HIGH!</p>
+    <div class="joints">
+        <div style="margin-top: 100px;">
+            <img class="joint" src="images/joint.png" alt="">
+        </div>
+
+        <div class="center">
+            <img src="images/pointing_finger.png" alt="">
+            <p class="fearmonger">DON'T DRIVE WHILE HIGH!</p>
+        </div>
+
+        <div style="margin-top: 100px;">
+            <img class="joint" src="images/joint.png" alt="">
+        </div>
     </div>
 
     <div id="facts-content">
         <h2>Learn The Facts</h2>
         <div class="facts">
             <div class="f-content">
-                <a href="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/" target="_blank"><img src="images/marijuana_thc_graph.png" alt="" width="700" height="500" cite="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/"></a>
-                <p  class="source" cite="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/"><cite>Source: sas.com</cite></p>
-                <p>Tetrahydrocannabinol (THC)  contributes to most of marijuana's psychological effects, affecting the memory, movement, coordination, and time perception.</p>
+                <img src="images/driving_danger.jpg" alt="" cite="https://www.drugabuse.gov/publications/research-reports/marijuana/does-marijuana-use-affect-driving">
+                <p>Marijuana is the most commonly used "illegal" drug in the United States</p>
+                <p>While driving, the driver are affected by:</p>
                 <ul>
+                    <li>Slow reaction time</li>
+                    <li>Less coordination</li>
+                    <li>Harder time focusing on signals and sounds</li>
+                </ul>
+            </div>
+
+            <div class="f-content">
+                <a href="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/" target="_blank"><img src="images/marijuana_thc_graph.png" alt="" width="700" height="500" cite="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/"></a>
+                <p style="margin-top: 3px;"><a href="https://blogs.sas.com/content/sastraining/2015/02/23/tracking-the-increase-in-marijuanas-thc-content/" target="_blank">Source: sas.com</a></p>
+                
+                <p style="margin-bottom: 3px;">Tetrahydrocannabinol (THC)  contributes to most of marijuana's psychological effects, affecting the memory, movement, coordination, and time perception.</p>
+                <ul style="margin-top: 0;">
                     <li>THC levels in the 1990s: 3-4%</li>
                     <li>THC levels today: 15-20%</li>
                 </ul>
@@ -46,14 +68,21 @@
 
             <div class="f-content">
                 <a href="https://www.samhsa.gov/data/sites/default/files/reports/rpt29393/2019NSDUHFFRPDFWHTML/2019NSDUHFFR1PDFW090120.pdf" target="_blank"><img src="images/graph2.png" alt="" width="950" height="500"></a>
-                <p class="source" cite="https://www.samhsa.gov/data/sites/default/files/reports/rpt29393/2019NSDUHFFRPDFWHTML/2019NSDUHFFR1PDFW090120.pdf"><cite>Source: SAMHSA.gov, pg. 15</cite></p>
+                <p style="margin-top: 3px;"><a href="https://www.samhsa.gov/data/sites/default/files/reports/rpt29393/2019NSDUHFFRPDFWHTML/2019NSDUHFFR1PDFW090120.pdf" target="_blank">Source: SAMHSA.gov, pg. 15</a></p>
                 
-                <ul>
+                <p style="margin-bottom: 3px;">Groups who have used marijuana in 2019</p>
+                <ul style="margin-top: 0;">
                     <li>Ages 12-17: 3.3 million</li>
                     <li>Ages 18-25: 12.0 million</li>
                     <li>Ages 26+:   33.0 million</li>
                 </ul>
             </div>
+        </div>
+
+        <div class="center">
+            <p class="fearmonger">DON'T BE HIGH AS A KITE AND YOU MAY AVOID A TRAGEDY</p>
+            <a href="https://www.emeraldreport.com/legal-marijuana-accidents/" target="_blank"><img style="border: 1px solid black;" src="images/car_accident.jpg" alt=""></a>
+
         </div>
     </div>
 
@@ -94,7 +123,24 @@ window.onload = function () {
 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
+<script type="text/javascript">
+    let angle = 0;
+    let alternate = 1;
+    joints = document.getElementsByClassName("joint");
+    setInterval(function() {
+        for (let i = 0; i < joints.length; i++) {
+            joints[i].setAttribute("style", "transform: rotate(" + (angle * alternate) + "deg)");
+            alternate *= -1;
+        }
+        angle += 6.875;
+        if (angle > 360) {
+            angle = 0;
+        }
+    }, 100);
+</script>
+
 </body>
 </html>
 
 <!-- weed.png https://assets.stickpng.com/images/58499e38b89d73775876620e.png -->
+<!-- joint.png https://clipart.info/images/ccovers/1513719129smoke-blunt-transparent-weed-joint-png.png -->
